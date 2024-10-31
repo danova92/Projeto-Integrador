@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
+    <head>
+        <title>Dados do cliente</title>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                </head>
+                <body>
+                    <nav class="nav"> 
+                        <a th:href="@{/tela-inicio}">Tela Inicial</a> 
+                        <a th:href="@{/inserir-cliente}">Cadastro de clientes</a> 
+                    </nav>
+                    <h1>Cliente</h1>
+                    <p>Id: <span th:text="${cliente.id}"></span></p>
+                    <p>Nome: <span th:text="${cliente.nome}"></span></p>
+                    <p>CPF: <span th:text="${cliente.cpf}"></span></p>
+                    <p>RG: <span th:text="${cliente.rg}"></span></p>
+                    <p>E-mail: <span th:text="${cliente.email}"></span></p>
+                    <form th:action="@{/guardar-quarto}" method="POST" th:object="${quarto}">
+                        <div>
+                            <p>Escolha o quarto do cliente: </p>
+                            <p>Número: <input type="text" th:field="${quarto.numero}"/></p>
+                            <input type="hidden" name="clienteId" th:value="${cliente.id}"/> <!-- Altere para th:value -->
+                        </div>        
+                        <button type="submit" class="btn btn-success">Confirmar</button>
+                    </form>
+                    <hr>
+                        <ul>
+                            <li th:each="quarto : ${quartos}">
+                                <p><span th:text="'Quarto ID: ' + ${quarto.id}"></span></p> 
+                                <p><span th:text="'Número: ' + ${quarto.numero}"></span></p>
+                                <a th:href="@{'/excluir-quarto?id=' + ${quarto.id}}">Excluir</a>
+                            </li>
+                        </ul>
+                </body>
+                </html>
