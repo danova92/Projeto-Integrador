@@ -20,10 +20,11 @@ public class Cliente {
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
     
-    private int id;
+    private Integer id;
     private String nome;
     private String cpf;
     private String rg;
     private String email;
     private boolean status;
+   
     }
