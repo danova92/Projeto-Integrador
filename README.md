@@ -23,4 +23,4 @@ O objetivo desse software é fazer o controle de entradas e saídas de uma pousa
 O sistema inclui as seguintes funcionalidades:
 
 -  Cadastro de clientes
--  Cadastro de reservas de quarto
+-  Cadastro de quarto para o cliente
