@@ -1,4 +1,4 @@
-# Pousada Colibri
+  # Pousada Colibri
 
 ## Status do Projeto
 Em Desenvolvimento
@@ -24,5 +24,3 @@ O sistema inclui as seguintes funcionalidades:
 
 -  Cadastro de clientes
 -  Cadastro de reservas de quarto
--  Checkout de clientes
--  Cálculo do valor total da estadia do cliente
